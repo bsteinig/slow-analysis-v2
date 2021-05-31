@@ -2,6 +2,8 @@
 .container{
     margin-left: 3.5vh;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .img-container{
@@ -9,7 +11,7 @@
     height: 30rem;
 }
 
-.grid-toggle{
+.eye-grid-toggle{
     height: 2vw;
     width: 2vw;
     border-radius: 1vw;
@@ -25,11 +27,11 @@
              -.25rem -.25rem 1rem #ffffff;
 }
 
-.grid-toggle:hover{
+.eye-grid-toggle:hover{
     color: var(--primary1)
 }
 
-.toggle-down{
+.eye-toggle-down{
     background: linear-gradient(279.28deg, #F2F3F6 100%, #E5E6EC 0%);
     box-shadow: inset .25rem .25rem 1rem rgba(36, 65, 93, 0.302),
                 inset -.25rem -.25rem 1rem #ffffff;

@@ -8,7 +8,7 @@ import Grid from './grid'
 import "../Styles/image.css"
 
 
-function GraphComp({imgLink, gridNums, setGridNums, selection}) {
+function GraphComp({imgLink, gridNums, setGridNums, selection, options}) {
 
     const [gToggle, setGToggle] = useState(true)
 
@@ -48,20 +48,20 @@ function GraphComp({imgLink, gridNums, setGridNums, selection}) {
 
     return (
         <div className='container'>
-        <div className="img-container">
-            <button className={`grid-toggle ${gToggle ? '' : 'toggle-down'}`} onClick={() => gridToggle()}>
-                { gToggle ?
-                <i className="fas fa-eye-slash"></i>
-                :
-                <i className="fas fa-eye"></i>  
-                }
-            </button>
-            <div className="image-comp">
-                <img className="img" src={imgLink} alt="img"/>
-                <Grid gridNums={gridNums} selection={selection}/>
+            <div className="img-container">
+                <button className={`eye-grid-toggle ${gToggle ? '' : 'eye-toggle-down'}`} onClick={() => gridToggle()}>
+                    { gToggle ?
+                    <i className="fas fa-eye-slash"></i>
+                    :
+                    <i className="fas fa-eye"></i>  
+                    }
+                </button>
+                <div className="image-comp">
+                    <img className="img" src={imgLink} alt="img"/>
+                    <Grid gridNums={gridNums} selection={selection} options={options}/>
+                </div>
             </div>
-        </div>
-        {loadComp()}
+            {loadComp()}
         </div>
     )
 }

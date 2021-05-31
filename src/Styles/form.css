@@ -1,0 +1,80 @@
+.form-comp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.form-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 1.5rem;
+}
+
+.form-gen{
+    margin-top: 1.25rem;
+    border-radius: 2rem;
+    background: linear-gradient(279.28deg, #F2F3F6 0%, #E5E6EC 132.41%);
+    box-shadow:  .25rem .25rem 1rem rgba(36, 65, 93, 0.302),
+                -.25rem -.25rem 1rem #ffffff;
+
+    padding: .5rem 1rem;
+    border: none;
+
+    font-family: var(--font);
+    font-weight: 500;
+    font-size: 1.89rem;
+    color: var(--primary1);
+    cursor: pointer;
+}
+
+.form-gen:active{
+    box-shadow: inset  .25rem .25rem 1rem rgba(36, 65, 93, 0.302),
+                inset -.45rem -.45rem 1rem #ffffff;
+}
+
+.form-item{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    width: 24rem;
+   
+  
+    background: linear-gradient(269.08deg, #F2F3F6 1.58%, #E5E6EC 98.42%);
+    box-shadow: -10px -10px 80px #FFFFFF,
+                 8px 8px 60px rgba(36, 65, 93, 0.36);
+    border-radius: 2rem;
+  
+    margin: 1rem 1rem 2rem 1rem;
+  }
+  
+  .form-label{
+    color: var(--display-text);
+    font-family: var(--font);
+    margin-bottom: .2rem;
+    margin-top: .35rem;
+  }
+  
+  .form-input{
+    background: none;
+      border-radius: 25px;
+      box-shadow: inset .25rem .25rem 8px #586c8a7e,
+                inset -.35rem -.35rem 10px #ffffff;
+      border: none;
+      height: 2rem;
+      padding: .1rem .5rem;
+  
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--secondary-text);
+  }
+  
+  .textarea{
+    font-family: var(--font);
+    font-size: .9rem;
+    padding: .5rem;
+    height: 5.5rem;
+    border-radius: 1rem;
+  }

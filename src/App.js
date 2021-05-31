@@ -5,6 +5,7 @@ import StickyBox from "react-sticky-box"
 import './Styles/header.css'
 import ImgLink from './Components/imgLink'
 import GraphComp from './Components/graphComp'
+import Form from './Components/form'
 
 function App() {
 
@@ -23,6 +24,15 @@ function App() {
     f: 93,
   });
 
+  const [content, setContent] = useState([{id: 0},{id: 1},{id: 2},{id: 3},{id: 4},{id: 5}])
+  const [options, setOptions] = useState([
+  {val: 'title', option: 'Title'},
+  {val: 'source', option: 'Source'},
+  {val: 'xAxis', option: 'X-Axis'},
+  {val: 'yAxis', option: 'Y-Axis'},
+  {val: 'graph', option: 'Graph'},
+])
+
   const setComp = (e) => {
     setSelection(e.target.value);
     switch (e.target.value) {
@@ -36,6 +46,13 @@ function App() {
           e: 7,
           f: 93,
         })
+        setOptions([
+          {val: 'title', option: 'Title'},
+          {val: 'source', option: 'Source'},
+          {val: 'xAxis', option: 'X-Axis'},
+          {val: 'yAxis', option: 'Y-Axis'},
+          {val: 'graph', option: 'Graph'},
+        ])
         break;
       case 'r':
         setTitle('Extra Row')
@@ -48,6 +65,14 @@ function App() {
             f: 93,
             g: 7
         })
+        setOptions([
+          {val: 'title', option: 'Title'},
+          {val: 'source', option: 'Source'},
+          {val: 'xAxis', option: 'X-Axis'},
+          {val: 'yAxis', option: 'Y-Axis'},
+          {val: 'graph', option: 'Graph'},
+          {val: 'xAxisT', option: 'Top X-Axis'}
+        ])
         break;
       case 'c':
         setTitle('Extra Column')
@@ -60,6 +85,14 @@ function App() {
           f: 85,
           g: 8,
         })
+        setOptions([
+          {val: 'title', option: 'Title'},
+          {val: 'source', option: 'Source'},
+          {val: 'xAxis', option: 'X-Axis'},
+          {val: 'yAxis', option: 'Y-Axis'},
+          {val: 'graph', option: 'Graph'},
+          {val: 'points', option: 'Points'}
+        ])
         break;
       case 'e':
         setTitle('Experimental')
@@ -80,8 +113,8 @@ function App() {
           <ImgLink imgLink={imgLink} setImgLink={setImgLink} setLinkSubmitted={setLinkSubmitted} />
           {linkSubmitted ?
             <div>
-              <GraphComp imgLink={imgLink} gridNums={gridNums} setGridNums={setGridNums} selection={selection} />
-              <h4>Form</h4>
+              <GraphComp imgLink={imgLink} gridNums={gridNums} setGridNums={setGridNums} selection={selection} options={options}/>
+              <Form options={options} content={content} setContent={setContent} />
             </div>
             :
             <></>

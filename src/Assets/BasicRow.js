@@ -94,7 +94,7 @@ function BasicRow({gridNums, setGridNums}) {
                             <p className='percent'>%</p>
                         </div>
                     </span>
-                    <button className={`grid-toggle ${slideLock.a ? '' : 'toggle-down'}`} onClick={() => setSlideLock({...slideLock, a: !slideLock.a})}>
+                    <button className={` ${slideLock.a ? 'grid-toggle' : 'toggle-down'}`} onClick={() => setSlideLock({...slideLock, a: !slideLock.a})}>
                         { slideLock.a ?
                         <i className="fas fa-lock"></i>
                         :
@@ -123,7 +123,7 @@ function BasicRow({gridNums, setGridNums}) {
                             <p className='percent'>%</p>
                         </div>
                     </span>
-                    <button className={`grid-toggle ${slideLock.b ? '' : 'toggle-down'}`} onClick={() => setSlideLock({...slideLock, b: !slideLock.b})}>
+                    <button className={` ${slideLock.b ? 'grid-toggle' : 'toggle-down'}`} onClick={() => setSlideLock({...slideLock, b: !slideLock.b})}>
                         { slideLock.b ?
                         <i className="fas fa-lock"></i>
                         :

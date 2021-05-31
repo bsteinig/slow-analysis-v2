@@ -17,6 +17,7 @@
   width: 22rem;
   border-radius: 2rem;
   margin-left: 1rem;
+  padding: 1rem .5rem;
 }
 
 .slide-obj{
@@ -94,7 +95,18 @@
 }
 
 .toggle-down{
+  height: 2rem;
+  width: 2rem;
+  border-radius: 1rem;
+  border: none;
+  font-size: 1rem;
+  margin-right: .25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--display-text);
+  padding: .15rem;
   background: linear-gradient(279.28deg, #F2F3F6 100%, #E5E6EC 0%);
-  box-shadow: .25rem .25rem 1rem rgba(36, 65, 93, 0.302),
-              -.25rem -.25rem 1rem #ffffff;
+  box-shadow:  .25rem .25rem 1rem rgba(36, 65, 93, 0.302),
+               -.25rem -.25rem 1rem #ffffff;
 }

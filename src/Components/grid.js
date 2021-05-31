@@ -1,55 +1,13 @@
 import React, { useState } from 'react'
 
-let gridAreas =  [
-    {val: 'title', option: 'Title'},
-    {val: 'source', option: 'Source'},
-    {val: 'xAxis', option: 'X-Axis'},
-    {val: 'yAxis', option: 'Y-Axis'},
-    {val: 'graph', option: 'Graph'},
-]
-
-function Grid({gridNums, selection}) {
-
-    const [gridAreas, setGridAreas] = useState([
-        {val: 'title', option: 'Title'},
-        {val: 'source', option: 'Source'},
-        {val: 'xAxis', option: 'X-Axis'},
-        {val: 'yAxis', option: 'Y-Axis'},
-        {val: 'graph', option: 'Graph'},
-    ])
-
-    function templateColumns(){
-
-    }
+function Grid({gridNums, selection, options}) {
 
     function gridElements(){
-        switch(selection){
-            case 'b':
-                return (
-                    gridAreas.map(area => (
-                        <div className={`${area.val}`} id={`${area.val}`}>{area.option}</div>
-                    ))
-                )
-            case 'r':
-                let rGridAreas = [...gridAreas]
-                rGridAreas.push({val: 'xAxisT', option: 'Top X-Axis'})
-                return (
-                    rGridAreas.map(area => (
-                        <div className={`${area.val}`} id={`${area.val}`}>{area.option}</div>
-                    ))
-                )
-            case 'c':
-                let cGridAreas = [...gridAreas]
-                cGridAreas.push({val: 'points', option: 'Points'})
-                return (
-                    cGridAreas.map((area) => (
-                        <div className={`${area.val}`} id={`${area.val}`}>{area.option}</div>
-                    ))
-                )
-            default:
-                break;
-        }
-        //let r = {val: 'xAxisT', option: 'Top X-Axis'}
+        return (
+            options.map(area => (
+                <div className={`${area.val}`} id={`${area.val}`}>{area.option}</div>
+            ))
+        )
     }
 
     return (
