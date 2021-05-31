@@ -47,7 +47,8 @@ function GraphComp({imgLink, gridNums, setGridNums, selection}) {
     }
 
     return (
-        <div className="container">
+        <div className='container'>
+        <div className="img-container">
             <button className={`grid-toggle ${gToggle ? '' : 'toggle-down'}`} onClick={() => gridToggle()}>
                 { gToggle ?
                 <i className="fas fa-eye-slash"></i>
@@ -59,7 +60,8 @@ function GraphComp({imgLink, gridNums, setGridNums, selection}) {
                 <img className="img" src={imgLink} alt="img"/>
                 <Grid gridNums={gridNums} selection={selection}/>
             </div>
-            {loadComp()}
+        </div>
+        {loadComp()}
         </div>
     )
 }

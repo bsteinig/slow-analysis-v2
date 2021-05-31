@@ -4,6 +4,11 @@
     display: flex;
 }
 
+.img-container{
+    display: flex;
+    height: 30rem;
+}
+
 .grid-toggle{
     height: 2vw;
     width: 2vw;
@@ -34,12 +39,14 @@
 
 .image-comp{
     position: relative;
+    display: inline-block;
+    
 }
 
 .img{
     display: block;
-    width: 45rem;
-    height: auto;
+    width: auto;
+    height: 30rem;
 }
 
 .grid{

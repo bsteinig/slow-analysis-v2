@@ -13,6 +13,16 @@ function BasicRow({gridNums, setGridNums}) {
     const [lockedHeight, setLockedHeight] = useState(0)
 
     useEffect(() => {
+        setSlideLock({
+            a: false,
+            b: false,
+            c: false,
+            d: false
+        })
+        setLockedHeight(0)
+    }, []);
+
+    useEffect(() => {
         setLockedHeight(0)
         var x = 0
         for (var key in slideLock){
@@ -71,6 +81,8 @@ function BasicRow({gridNums, setGridNums}) {
     };
 
 
+    
+
     return (
         <div>
             <div className="slide-obj">
@@ -78,7 +90,7 @@ function BasicRow({gridNums, setGridNums}) {
                     <span className="txt-group">
                         <p className="slider-tag">Title Height</p>
                         <div className="input-group">
-                            <input type="number" className="input-num" value={gridNums.a} onChange={(e) => { if(e.target.value <= 100) changeTitle(parseInt(e.target.value))}} min={0} max={100} disabled={slideLock.a}/>
+                            <input type="number" className="input-num" value={gridNums.a} onChange={(e) => {if(isNaN(parseInt(e.target.value))){changeTitle(gridNums.a)}else if(e.target.value<=100){changeTitle(parseInt(e.target.value))} }} min={0} max={100} disabled={slideLock.a}/>
                             <p className='percent'>%</p>
                         </div>
                     </span>
@@ -107,7 +119,7 @@ function BasicRow({gridNums, setGridNums}) {
                     <span className="txt-group">
                         <p className="slider-tag">Graph Height</p>
                         <div className="input-group">
-                            <input type="number" className="input-num" value={gridNums.b} onChange={(e) => { if(e.target.value <= 100) changeGraph(parseInt(e.target.value))}} min={0} max={100} disabled={slideLock.b}/>
+                            <input type="number" className="input-num" value={gridNums.b} onChange={(e) => { if(isNaN(parseInt(e.target.value))){changeGraph(gridNums.b)}else if(e.target.value<=100){changeGraph(parseInt(e.target.value))}}} min={0} max={100} disabled={slideLock.b}/>
                             <p className='percent'>%</p>
                         </div>
                     </span>
@@ -136,7 +148,7 @@ function BasicRow({gridNums, setGridNums}) {
                     <span className="txt-group">
                         <p className="slider-tag">X-Axis Height</p>
                         <div className="input-group">
-                            <input type="number" className="input-num" value={gridNums.c} onChange={(e) => { if(e.target.value <= 100) changeXaxis(parseInt(e.target.value))}} min={0} max={100} disabled={slideLock.c}/>
+                            <input type="number" className="input-num" value={gridNums.c} onChange={(e) => { if(isNaN(parseInt(e.target.value))){changeXaxis(gridNums.c)}else if(e.target.value<=100){changeXaxis(parseInt(e.target.value))}}} min={0} max={100} disabled={slideLock.c}/>
                             <p className='percent'>%</p>
                         </div>
                     </span>
@@ -165,7 +177,7 @@ function BasicRow({gridNums, setGridNums}) {
                     <span className="txt-group">
                         <p className="slider-tag">Source Height</p>
                         <div className="input-group">
-                            <input type="number" className="input-num" value={gridNums.d} onChange={(e) => { if(e.target.value <= 100) changeSource(parseInt(e.target.value))}} min={0} max={100} disabled={slideLock.d}/>
+                            <input type="number" className="input-num" value={gridNums.d} onChange={(e) => {if(isNaN(parseInt(e.target.value))){changeSource(gridNums.d)}else if(e.target.value<=100){changeSource(parseInt(e.target.value))}}} min={0} max={100} disabled={slideLock.d}/>
                             <p className='percent'>%</p>
                         </div>
                     </span>
