@@ -1,0 +1,100 @@
+.slide-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .5rem;
+}
+
+.slider-comp{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(269.08deg, #F2F3F6 1.58%, #E5E6EC 98.42%);
+  box-shadow: -10px -10px 80px #FFFFFF,
+               8px 8px 60px rgba(36, 65, 93, 0.36);
+  width: 22rem;
+  border-radius: 2rem;
+  margin-left: 1rem;
+}
+
+.slide-obj{
+    margin-bottom: 1.75rem;
+}
+
+.slider{
+  width: 20rem !important;
+}
+
+.slider-tag{
+  font-family: var(--font);
+  color: var(--secondary-text);
+  font-size: 1.5rem;
+  margin-right: .5rem;
+}
+
+.txt-group{
+  display: flex;
+  flex-direction: row;
+}
+
+.input-group{
+  background: none;
+  border-radius: 1rem;
+  box-shadow: inset .25rem .25rem 8px #586c8a7e,
+              inset -.35rem -.35rem 10px #ffffff;
+  border: none;
+  height: 2rem;
+  width: 4.75rem;
+  padding: .2rem .4rem .2rem .5rem;
+  font-size: 1.25rem;
+  color: var(--display-text);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.input-num{
+  padding: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--display-text);
+  width: 2.97rem;
+  text-align: right;
+}
+
+.percent{
+  font-size: 1.5rem;
+  font-family: var(--font);
+  font-weight: 500;
+  color: var(--display-text);
+}
+
+.grid-toggle{
+  height: 2rem;
+  width: 2rem;
+  border-radius: 1rem;
+  border: none;
+  font-size: 1rem;
+  margin-right: .25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--display-text);
+  padding: .15rem;
+  background: linear-gradient(279.28deg, #F2F3F6 0%, #E5E6EC 132.41%);
+  box-shadow: inset .25rem .25rem 1rem rgba(36, 65, 93, 0.302),
+              inset -.25rem -.25rem 1rem #ffffff;
+}
+
+.grid-toggle:hover{
+  color: var(--primary1)
+}
+
+.toggle-down{
+  background: linear-gradient(279.28deg, #F2F3F6 100%, #E5E6EC 0%);
+  box-shadow: .25rem .25rem 1rem rgba(36, 65, 93, 0.302),
+              -.25rem -.25rem 1rem #ffffff;
+}

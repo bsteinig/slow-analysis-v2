@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
-import Basic from './basic'
-import ExtraRow from './extraRow'
-import ExtraCol from './extraCol'
+import BasicRow from '../Assets/BasicRow'
+import BasicCol from '../Assets/BasicCol'
+import Row from '../Assets/Row'
+import Col from '../Assets/Col'
 import Custom from './custom'
+import Grid from './grid'
+import "../Styles/image.css"
+
 
 function GraphComp({imgLink, gridNums, setGridNums, selection}) {
 
@@ -21,11 +25,20 @@ function GraphComp({imgLink, gridNums, setGridNums, selection}) {
     function loadComp(){
         switch(selection){
           case 'b':
-            return <Basic gridNums={gridNums} setGridNums={setGridNums} />
+            return (<div className="slider-comp">
+                        <BasicRow gridNums={gridNums} setGridNums={setGridNums} />
+                        <BasicCol gridNums={gridNums} setGridNums={setGridNums} />
+                    </div>)
           case 'r':
-            return <ExtraRow gridNums={gridNums} setGridNums={setGridNums}/>
+            return (<div className="slider-comp">
+                        <Row gridNums={gridNums} setGridNums={setGridNums} />
+                        <BasicCol gridNums={gridNums} setGridNums={setGridNums} />
+                    </div>)
           case 'c':
-            return <ExtraCol gridNums={gridNums} setGridNums={setGridNums}/>
+            return (<div className="slider-comp">
+                        <BasicRow gridNums={gridNums} setGridNums={setGridNums} />
+                        <Col gridNums={gridNums} setGridNums={setGridNums} />
+                    </div>)
           case 'e':
             return <Custom gridNums={gridNums} setGridNums={setGridNums}/>
           default:
@@ -44,18 +57,7 @@ function GraphComp({imgLink, gridNums, setGridNums, selection}) {
             </button>
             <div className="image-comp">
                 <img className="img" src={imgLink} alt="img"/>
-                <div className="grid" id="grid"
-                    style={{
-                        gridTemplateRows: `${gridNums.a}% ${gridNums.b}% ${gridNums.c}% ${gridNums.d}%`,
-                        gridTemplateColumns: `${gridNums.e}% ${gridNums.f}%`,
-                    }}
-                    >
-                    <div className="title" id="title">Title</div>
-                    <div className="yAxis" id="yAxis">Y-Axis</div>
-                    <div className="graph" id="graph">Graph</div>
-                    <div className="xAxis" id="xAxis"> X-Axis</div>
-                    <div className="source" id="source">Source</div>
-                </div>
+                <Grid gridNums={gridNums} selection={selection}/>
             </div>
             {loadComp()}
         </div>

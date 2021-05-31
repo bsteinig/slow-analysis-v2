@@ -1,11 +1,11 @@
 import React from 'react'
 
-function ExtraRow() {
+function BasicCol() {
     return (
         <div>
-            Extra Row
+            basic col
         </div>
     )
 }
 
-export default ExtraRow
+export default BasicCol

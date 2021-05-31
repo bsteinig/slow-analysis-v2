@@ -60,6 +60,39 @@
         'source source';
 }
 
+.grid-extraRow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* grid stying */
+    visibility: visible;
+    display: grid;
+    grid-template-areas: 
+        'title title'
+        'xAxisT xAxisT'
+        'yAxis graph'
+        'xAxis xAxis'
+        'source source';
+}
+
+.grid-extraCol{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* grid stying */
+    visibility: visible;
+    display: grid;
+    grid-template-areas: 
+        'title title title'
+        'yAxis graph points'
+        'xAxis xAxis xAxis'
+        'source source source';
+}
+
 .title{
     grid-area: title;
     color: white;
@@ -100,6 +133,19 @@
     opacity: .65;
 }
 
-.slider-comp{
-
+.points{
+    grid-area: points;
+    color: white;
+    text-align: center;
+    background-color: var(--graph5);
+    opacity: .75;
 }
+
+.xAxisT{
+    grid-area: xAxisT;
+    color: white;
+    text-align: center;
+    background-color: var(--graph2);
+    opacity: .75;
+}
+
