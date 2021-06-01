@@ -9,11 +9,11 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding-top: 1.5rem;
 }
 
 .form-gen{
     margin-top: 1.25rem;
+    margin-bottom: 3rem;
     border-radius: 2rem;
     background: linear-gradient(279.28deg, #F2F3F6 0%, #E5E6EC 132.41%);
     box-shadow:  .25rem .25rem 1rem rgba(36, 65, 93, 0.302),

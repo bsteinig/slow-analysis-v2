@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 import Field from '../Assets/field'
 import '../Styles/form.css'
 
-function Form({options, content, setContent}) {
+function Form({options, content, setContent, setGenerated}) {
 
     const [genForm, setGenForm] = useState(false)
 
     function genF(){
-        if(!genForm){ setGenForm(true)}
+        if(!genForm){ setGenForm(true); setGenerated(true) }
         document.getElementById('form').scrollIntoView()        
     }
 
