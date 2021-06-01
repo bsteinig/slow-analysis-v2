@@ -65,3 +65,15 @@
     flex-direction: column;
     align-items: center;
 }
+
+.spacer{
+    height: .15rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(116.9deg, #F8F8FC 100%, #E1E2E8 0%);;
+}
+
+.embed{
+    width: 1000px;
+    height: 500px;
+    margin-bottom: 3rem;
+}

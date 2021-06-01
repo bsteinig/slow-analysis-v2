@@ -72,6 +72,7 @@ function Col({gridNums, setGridNums}) {
 
     return (
         <div>
+            <div className='spacer'/>
             <div className="slide-obj">
                 <div className="slide-row">
                     <span className="txt-group">
