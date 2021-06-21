@@ -1,5 +1,4 @@
-import firebase from 'firebase';
-import 'firebase/app'
+import firebase from 'firebase/app';
 import "firebase/storage";
 
 var firebaseConfig = {
@@ -14,13 +13,7 @@ var firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
 
 const storage = firebase.storage()
 
-
-
-
-export {
-    storage, firebase as default
-}
+export { storage, firebase as default };

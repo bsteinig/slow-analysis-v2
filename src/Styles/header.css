@@ -9,6 +9,21 @@
     font-size: 4rem;
 }
 
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.or{
+    font-family: var(--font);
+    color: var(--primary1);
+    font-size: 1.25rem;
+}
+
+.input-file{
+    padding-top: .75rem;
+}
+
 .header{
     display: flex;
     align-items: center;
